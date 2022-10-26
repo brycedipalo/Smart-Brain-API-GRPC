@@ -21,11 +21,11 @@ client.connect();
 */
 
 const db = knex({
-    client: 'pg',
+    /* client: 'pg',
     connection: {
       ConnectionString : process.env.DATABASE_URL,
       ssl:true,
-    }
+    */}
 });
 
 
