@@ -26,7 +26,7 @@ const db = knex({
       ConnectionString : process.env.DATABASE_URL,
       ssl:true,
     */}
-});
+);
 
 
 const app = express();
