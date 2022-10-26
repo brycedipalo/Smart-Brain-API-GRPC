@@ -9,14 +9,10 @@ const profile = require('./controllers/profile');
 const image = require('./controllers/image');
 
 const db = knex({
-    client: 'pg',
-    connection: {
-      host : process.env.DATABASE_URL,
-      //port : 3306,
-      user : 'postgres',
-      password : 'test',
-      database : 'smartbrain'
-    }
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false
+  }
 });
 
 const app = express();
